@@ -1,0 +1,11 @@
+.search-keyboard {
+  position: relative;
+  left: -90px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.search-keyboard img {
+  width: 40px;
+  height: 23px;
+}

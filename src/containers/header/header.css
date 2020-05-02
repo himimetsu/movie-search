@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.header {
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  background-image: url('./img/header.svg');
+  background-size: cover;
+  background-color: #2C3E50;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 900;
+  user-select: none;
+  text-align: center;
+  color: white;
+}

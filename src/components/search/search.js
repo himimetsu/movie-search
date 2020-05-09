@@ -1,8 +1,8 @@
 import './search.css'
 import button from '../UI/button/button'
+import clear from '../UI/clear/clear'
 import form from '../UI/form/form'
 import input from '../UI/input/input'
-import clear from '../UI/clear/clear'
 import keyboard from '../UI/keyboard/keyboard'
 
 const searchField = () => {

@@ -4,12 +4,17 @@ const omdb = async (name, page) => {
   await fetch(url)
     .then((res) => res.json())
     .then((data) => {
-      data.Search.map((item) => {
-        result.push(item)
+      if (data.Response === 'True') {
+        data.Search.map((item) => {
+          result.push(item)
 
-        return true
-      })
+          return true
+        })
+      } else {
+        document.getElementsByClassName('result__text')[0].innerText = `No results for ${name}`
+      }
     })
+    .catch((error) => console.log(error))
 
   const promisesRating = result.map(async (item) => {
     let link = `https://www.omdbapi.com/?i=${item.imdbID}&apikey=b3bbe1b3`

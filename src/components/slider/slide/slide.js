@@ -36,7 +36,7 @@ const year = (value) => {
 const score = (value) => {
   const div = document.createElement('div')
   div.classList.add('score')
-  div.appendChild(document.createTextNode(value))
+  div.appendChild(document.createTextNode(`${value} / 10`))
 
   return div
 }

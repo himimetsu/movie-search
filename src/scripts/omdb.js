@@ -1,8 +1,14 @@
+import getStatus from './getStatus'
+
 const omdb = async (name, page) => {
   let result = []
   const url = `https://www.omdbapi.com/?s=${name}&page=${page}&apikey=b3bbe1b3`
   await fetch(url)
-    .then((res) => res.json())
+    .then((res) => {
+      getStatus(res.status)
+
+      return res.json()
+    })
     .then((data) => {
       if (data.Response === 'True') {
         data.Search.map((item) => {

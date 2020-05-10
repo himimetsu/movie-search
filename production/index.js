@@ -9984,153 +9984,27 @@ swiper_esm_bundle_Swiper.use(components);
 /* harmony default export */ var swiper_esm_bundle = (swiper_esm_bundle_Swiper);
 //# sourceMappingURL=swiper.esm.bundle.js.map
 
-// EXTERNAL MODULE: ./src/containers/footer/footer.css
-var footer = __webpack_require__(2);
-
-// CONCATENATED MODULE: ./src/containers/footer/footer.js
-
-
-var footer_footer = function footer() {
-  var foot = document.createElement('footer');
-  return foot;
-};
-
-/* harmony default export */ var containers_footer_footer = (footer_footer);
-// EXTERNAL MODULE: ./src/containers/header/header.css
-var header = __webpack_require__(6);
-
-// CONCATENATED MODULE: ./src/containers/header/header.js
-
-
-var header_header = function header() {
-  var head = document.createElement('header');
-  head.classList.add('header');
-  var title = document.createElement('h1');
-  title.classList.add('title');
-  title.appendChild(document.createTextNode('MovieSearch'));
-  head.appendChild(title);
-  return head;
-};
-
-/* harmony default export */ var containers_header_header = (header_header);
-// EXTERNAL MODULE: ./src/containers/main/main.css
-var main = __webpack_require__(10);
-
-// EXTERNAL MODULE: ./src/components/search/search.css
-var search = __webpack_require__(12);
-
-// EXTERNAL MODULE: ./src/components/UI/button/button.css
-var button_button = __webpack_require__(15);
-
-// CONCATENATED MODULE: ./src/components/UI/button/button.js
-
-
-var button_button_button = function button(name, type, text) {
-  var btn = document.createElement('button');
-  btn.className = "".concat(name, " btn");
-  btn.type = type;
-  btn.appendChild(document.createTextNode(text));
-  return btn;
-};
-
-/* harmony default export */ var UI_button_button = (button_button_button);
-// EXTERNAL MODULE: ./src/components/UI/form/form.css
-var form_form = __webpack_require__(17);
-
-// CONCATENATED MODULE: ./src/components/UI/form/form.js
-
-
-var form_form_form = function form(name) {
-  var formTag = document.createElement('form');
-  formTag.classList.add(name);
-  return formTag;
-};
-
-/* harmony default export */ var UI_form_form = (form_form_form);
-// EXTERNAL MODULE: ./src/components/UI/input/input.css
-var input_input = __webpack_require__(19);
-
-// CONCATENATED MODULE: ./src/components/UI/input/input.js
-
-
-var input_input_input = function input(info) {
-  var inputTag = document.createElement('input');
-  inputTag.className = info[0];
-  inputTag.type = info[1];
-
-  if (info[1] === 'image') {
-    inputTag.src = info[2];
-    inputTag.setAttribute('data-name', info[3]);
-  } else {
-    inputTag.setAttribute('autofocus', true);
-    inputTag.placeholder = info[2];
-  }
-
-  return inputTag;
-};
-
-/* harmony default export */ var UI_input_input = (input_input_input);
-// EXTERNAL MODULE: ./src/components/UI/clear/clear.css
-var clear_clear = __webpack_require__(21);
-
-// CONCATENATED MODULE: ./src/components/UI/clear/clear.svg
-/* harmony default export */ var UI_clear_clear = (__webpack_require__.p + "assets/images/clear.svg");
-// CONCATENATED MODULE: ./src/components/UI/clear/clear.js
-
-
-
-var clear_clear_clear = function clear() {
-  var div = document.createElement('div');
-  div.className = 'seacrh-clear tooltip';
-  var image = document.createElement('img');
-  image.src = UI_clear_clear;
-  div.appendChild(image);
-  return div;
-};
-
-/* harmony default export */ var components_UI_clear_clear = (clear_clear_clear);
-// EXTERNAL MODULE: ./src/components/UI/keyboard/keyboard.css
-var keyboard_keyboard = __webpack_require__(23);
-
-// CONCATENATED MODULE: ./src/components/UI/keyboard/keyboard.png
-/* harmony default export */ var UI_keyboard_keyboard = (__webpack_require__.p + "assets/images/keyboard.png");
-// CONCATENATED MODULE: ./src/components/UI/keyboard/keyboard.js
-
-
-
-var keyboard_keyboard_keyboard = function keyboard() {
-  var div = document.createElement('div');
-  div.className = 'search-keyboard tooltip';
-  var image = document.createElement('img');
-  image.src = UI_keyboard_keyboard;
-  div.appendChild(image);
-  return div;
-};
-
-/* harmony default export */ var components_UI_keyboard_keyboard = (keyboard_keyboard_keyboard);
-// CONCATENATED MODULE: ./src/components/search/search.js
-
-
-
-
-
-
-
-var search_searchField = function searchField() {
-  var renderSearch = document.createDocumentFragment();
-  var temp = UI_form_form('search');
-  temp.appendChild(UI_input_input(['search-input', 'text', 'Search movie']));
-  temp.appendChild(components_UI_clear_clear());
-  temp.appendChild(components_UI_keyboard_keyboard());
-  temp.appendChild(UI_button_button('search-btn', 'submit', 'Search'));
-  renderSearch.appendChild(temp);
-  return renderSearch;
-};
-
-/* harmony default export */ var search_search = (search_searchField);
 // EXTERNAL MODULE: ./src/components/slider/slider.css
-var slider = __webpack_require__(25);
+var slider = __webpack_require__(2);
 
+// EXTERNAL MODULE: ./src/components/UI/loader/loader.css
+var loader = __webpack_require__(6);
+
+// CONCATENATED MODULE: ./src/components/UI/loader/loader.js
+
+
+var loader_loader = function loader() {
+  var div = document.createElement('div');
+  var bgLoad = document.createElement('div');
+  bgLoad.classList.add('bg-loader');
+  div.className = 'loader hidden-load';
+  var inner = ['<svg version="1.1" id="loader-1"', 'xmlns="http://www.w3.org/2000/svg"', 'xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"', 'width="200px" height="200px" viewBox="0 0 50 50"', 'style="enable-background:new 0 0 50 50;" xml:space="preserve">', '<path fill="#000" d="M43.935,25.145c0-10.318-8.364-18.683-', '18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-', '8.071,6.543-14.615,14.615-', '14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">', '<animateTransform attributeType="xml"', 'attributeName="transform"', 'type="rotate"', 'from="0 25 25"', 'to="360 25 25"', 'dur="0.6s"', 'repeatCount="indefinite"/>', '</path>', '</svg>'];
+  div.innerHTML = inner.join('');
+  div.appendChild(bgLoad);
+  return div;
+};
+
+/* harmony default export */ var UI_loader_loader = (loader_loader);
 // CONCATENATED MODULE: ./src/scripts/omdb.js
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -10149,10 +10023,16 @@ var omdb = /*#__PURE__*/function () {
             return fetch(url).then(function (res) {
               return res.json();
             }).then(function (data) {
-              data.Search.map(function (item) {
-                result.push(item);
-                return true;
-              });
+              if (data.Response === 'True') {
+                data.Search.map(function (item) {
+                  result.push(item);
+                  return true;
+                });
+              } else {
+                document.getElementsByClassName('result__text')[0].innerText = "No results for ".concat(name);
+              }
+            })["catch"](function (error) {
+              return console.log(error);
             });
 
           case 4:
@@ -10205,7 +10085,7 @@ var omdb = /*#__PURE__*/function () {
 
 /* harmony default export */ var scripts_omdb = (omdb);
 // EXTERNAL MODULE: ./src/components/slider/slide/slide.css
-var slide_slide = __webpack_require__(27);
+var slide_slide = __webpack_require__(8);
 
 // CONCATENATED MODULE: ./src/components/slider/slide/img/default.jpg
 /* harmony default export */ var img_default = (__webpack_require__.p + "assets/images/default.jpg");
@@ -10271,11 +10151,6 @@ function slider_asyncToGenerator(fn) { return function () { var self = this, arg
 
 
 
-var pagination = function pagination() {
-  var div = document.createElement('div');
-  div.classList.add('swiper-pagination');
-  return div;
-};
 
 var slider_next = function next() {
   var div = document.createElement('div');
@@ -10291,7 +10166,6 @@ var slider_prev = function prev() {
 
 var control = function control() {
   var frag = document.createDocumentFragment();
-  frag.appendChild(pagination());
   frag.appendChild(slider_next());
   frag.appendChild(slider_prev());
   return frag;
@@ -10299,30 +10173,35 @@ var control = function control() {
 
 var slider_slider = /*#__PURE__*/function () {
   var _ref = slider_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(name, page) {
-    var div, wrapper;
+    var divSlider, div, wrapper;
     return regeneratorRuntime.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
+            divSlider = document.createElement('div');
+            divSlider.classList.add('slider');
             div = document.createElement('div');
             wrapper = document.createElement('div');
             wrapper.classList.add('swiper-wrapper');
             div.className = 'swiper-container';
-            _context.next = 6;
+            _context.next = 8;
             return scripts_omdb(name, page);
 
-          case 6:
-            _context.next = 8;
+          case 8:
+            _context.next = 10;
             return _context.sent.map(function (item) {
               wrapper.appendChild(slider_slide_slide(item));
+              return true;
             });
 
-          case 8:
+          case 10:
             div.appendChild(wrapper);
-            div.appendChild(control());
-            return _context.abrupt("return", div);
+            divSlider.appendChild(div);
+            divSlider.appendChild(control());
+            divSlider.appendChild(UI_loader_loader());
+            return _context.abrupt("return", divSlider);
 
-          case 11:
+          case 15:
           case "end":
             return _context.stop();
         }
@@ -10336,41 +10215,31 @@ var slider_slider = /*#__PURE__*/function () {
 }();
 
 /* harmony default export */ var components_slider_slider = (slider_slider);
-// CONCATENATED MODULE: ./src/containers/main/main.js
-function main_asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+// CONCATENATED MODULE: ./src/scripts/addSlides.js
+function addSlides_asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
-function main_asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { main_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { main_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
-
+function addSlides_asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { addSlides_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { addSlides_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
 
 
-var main_main = /*#__PURE__*/function () {
-  var _ref = main_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-    var mainTag, container;
+var addSlides = /*#__PURE__*/function () {
+  var _ref = addSlides_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+    var newContent, arr;
     return regeneratorRuntime.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            mainTag = document.createElement('main');
-            container = document.createElement('div');
-            container.classList.add('container');
-            container.appendChild(search_search());
-            _context.t0 = container;
-            _context.next = 7;
-            return components_slider_slider('dream', 1);
+            console.log('add');
+            sessionStorage.setItem('Page', sessionStorage.getItem('Page') / 1 + 1);
+            _context.next = 4;
+            return components_slider_slider(sessionStorage.getItem('Category'), sessionStorage.getItem('Page') / 1 + 1);
+
+          case 4:
+            newContent = _context.sent;
+            arr = Array.from(newContent.childNodes[0].children);
+            return _context.abrupt("return", arr[0].children);
 
           case 7:
-            _context.t1 = _context.sent;
-
-            _context.t0.appendChild.call(_context.t0, _context.t1);
-
-            mainTag.appendChild(container);
-            sessionStorage.setItem('Category', 'dream');
-            sessionStorage.setItem('Page', 1);
-            return _context.abrupt("return", mainTag);
-
-          case 13:
           case "end":
             return _context.stop();
         }
@@ -10378,12 +10247,97 @@ var main_main = /*#__PURE__*/function () {
     }, _callee);
   }));
 
-  return function main() {
+  return function addSlides() {
     return _ref.apply(this, arguments);
   };
 }();
 
-/* harmony default export */ var containers_main_main = (main_main);
+/* harmony default export */ var scripts_addSlides = (addSlides);
+// EXTERNAL MODULE: ./src/containers/footer/footer.css
+var footer = __webpack_require__(10);
+
+// CONCATENATED MODULE: ./src/containers/footer/img/github.png
+/* harmony default export */ var github = (__webpack_require__.p + "assets/images/github.png");
+// CONCATENATED MODULE: ./src/containers/footer/footer.js
+
+
+
+var school = function school() {
+  var div = document.createElement('div');
+  div.classList.add('school');
+  div.appendChild(document.createTextNode('RS School 2020q1'));
+  return div;
+};
+
+var footer_logo = function logo() {
+  var div = document.createElement('div');
+  var link = document.createElement('a');
+  div.classList.add('logo-git');
+  var img = document.createElement('img');
+  img.src = github;
+  link.href = 'https://github.com/himimetsu';
+  link.appendChild(img);
+  div.appendChild(link);
+  return div;
+};
+
+var linkToGit = function linkToGit() {
+  var link = document.createElement('a');
+  link.appendChild(document.createTextNode('himimetsu'));
+  link.href = 'https://github.com/himimetsu';
+  return link;
+};
+
+var profile = function profile() {
+  var div = document.createElement('div');
+  div.classList.add('profile');
+  div.appendChild(footer_logo());
+  div.appendChild(linkToGit());
+  return div;
+};
+
+var footer_footer = function footer() {
+  var foot = document.createElement('footer');
+  var container = document.createElement('div');
+  container.classList.add('container');
+  container.appendChild(school());
+  container.appendChild(profile());
+  foot.appendChild(container);
+  return foot;
+};
+
+/* harmony default export */ var containers_footer_footer = (footer_footer);
+// CONCATENATED MODULE: ./src/scripts/showResults.js
+var rewritingCategory = function rewritingCategory(bool, word) {
+  if (bool) {
+    if (word) {
+      sessionStorage.setItem('Category', word);
+    } else {
+      sessionStorage.setItem('Category', document.getElementsByClassName('search-input')[0].value);
+    }
+
+    sessionStorage.setItem('Page', 1);
+    var category = sessionStorage.getItem('Category');
+    document.getElementsByClassName('result__text')[0].innerText = "Showing results for \"".concat(category, "\"");
+  } else {
+    var error = document.getElementsByClassName('search-input')[0].value;
+    document.getElementsByClassName('result__text')[0].innerText = "No results for \"".concat(error, "\"");
+  }
+};
+
+var showResults = function showResults(bool, word) {
+  var result = document.getElementsByClassName('result')[0];
+
+  if (bool) {
+    rewritingCategory(bool, word);
+    result.classList.add('right');
+  } else {
+    rewritingCategory(bool);
+    result.classList.remove('right');
+  }
+};
+
+/* harmony default export */ var scripts_showResults = (showResults);
 // CONCATENATED MODULE: ./src/scripts/getTranslate.js
 function getTranslate_asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -10422,104 +10376,84 @@ var getTranslate_translate = /*#__PURE__*/function () {
 }();
 
 /* harmony default export */ var scripts_getTranslate = (getTranslate_translate);
-// CONCATENATED MODULE: ./src/scripts/handling.js
-function handling_asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+// CONCATENATED MODULE: ./src/scripts/handKeyboard.js
+function handKeyboard_asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
-function handling_asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { handling_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { handling_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
-
+function handKeyboard_asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { handKeyboard_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { handKeyboard_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
 
-var handling_reset = function reset() {
-  document.getElementsByClassName('search-input')[0].value = '';
+
+
+
+var changeCaseCycle = function changeCaseCycle() {
+  var up = document.getElementsByClassName('up');
+  var down = document.getElementsByClassName('down');
+
+  for (var index = 0; index < up.length; index += 1) {
+    up[index].classList.toggle('hidden');
+    down[index].classList.toggle('hidden');
+  }
 };
 
-var handling_keyboard = function keyboard() {
-  event.preventDefault();
+var changeLang = function changeLang() {
+  var rus = document.getElementsByClassName('rus');
+  var eng = document.getElementsByClassName('eng');
+
+  for (var index = 0; index < rus.length; index += 1) {
+    rus[index].classList.toggle('hidden');
+    eng[index].classList.toggle('hidden');
+    rus[index].classList.toggle('show');
+    eng[index].classList.toggle('show');
+  }
 };
 
-var handling_submit = /*#__PURE__*/function () {
-  var _ref = handling_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+var activeClick = function activeClick(event) {
+  var currentClick = '';
+
+  if (event.target.classList[0] === 'down' || event.target.classList[0] === 'up') {
+    currentClick = event.target.parentNode.parentNode;
+  } else {
+    currentClick = event.target;
+  }
+
+  currentClick.classList.add('active');
+  setTimeout(function () {
+    currentClick.classList.remove('active');
+  }, 200);
+};
+
+var sendRequest = /*#__PURE__*/function () {
+  var _ref = handKeyboard_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
     var input, word, newContent, fragment;
     return regeneratorRuntime.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            event.preventDefault();
             input = document.getElementsByClassName('search-input')[0];
-            console.log('trans start');
-            _context.next = 5;
+            _context.next = 3;
             return scripts_getTranslate(input.value);
 
-          case 5:
+          case 3:
             word = _context.sent;
-            console.log('trans finish'); // const newContent = await slider(input.value, 1)
-
-            console.log('new start');
-            _context.next = 10;
+            _context.next = 6;
             return components_slider_slider(word, 1);
 
-          case 10:
+          case 6:
             newContent = _context.sent;
-            console.log('new finish');
-            fragment = document.createDocumentFragment();
-            Array.from(document.getElementsByClassName('swiper-wrapper')[0].children).map(function (child) {
-              return child.remove();
-            });
-            Array.from(newContent.childNodes[0].children).map(function (child) {
-              return fragment.appendChild(child);
-            });
-            document.getElementsByClassName('swiper-wrapper')[0].appendChild(fragment);
 
-          case 16:
-          case "end":
-            return _context.stop();
-        }
-      }
-    }, _callee);
-  }));
-
-  return function submit() {
-    return _ref.apply(this, arguments);
-  };
-}();
-
-var handling = function handling() {
-  document.getElementsByClassName('seacrh-clear')[0].addEventListener('click', handling_reset);
-  document.getElementsByClassName('search-keyboard')[0].addEventListener('click', handling_keyboard);
-  document.getElementsByClassName('search-input')[0] / addEventListener('submit', handling_submit);
-};
-
-/* harmony default export */ var scripts_handling = (handling);
-// CONCATENATED MODULE: ./src/scripts/addSlides.js
-function addSlides_asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function addSlides_asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { addSlides_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { addSlides_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
-
-
-var addSlides = /*#__PURE__*/function () {
-  var _ref = addSlides_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-    var newContent, arr;
-    return regeneratorRuntime.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            console.log('add'); // const newContent = await slider(sessionStorage.getItem('Category'), sessionStorage.getItem('Page') / 1 + 1)
-            // sessionStorage.setItem('Page', sessionStorage.getItem('Page') / 1 + 1)
-            // const fragment = document.createDocumentFragment()
-            // Array.from(newContent.childNodes[0].children).map((child) => fragment.appendChild(child))
-            // document.getElementsByClassName('swiper-wrapper')[0].appendChild(fragment)
-
-            sessionStorage.setItem('Page', sessionStorage.getItem('Page') / 1 + 1);
-            _context.next = 4;
-            return components_slider_slider(sessionStorage.getItem('Category'), sessionStorage.getItem('Page') / 1 + 1);
-
-          case 4:
-            newContent = _context.sent;
-            arr = Array.from(newContent.childNodes[0].children);
-            console.log(arr);
-            return _context.abrupt("return", arr);
+            if (Array.from(newContent.childNodes[0].children).length > 0) {
+              fragment = document.createDocumentFragment();
+              Array.from(document.getElementsByClassName('swiper-wrapper')[0].children).map(function (child) {
+                return child.remove();
+              });
+              Array.from(newContent.childNodes[0].childNodes[0].children).map(function (child) {
+                return fragment.appendChild(child);
+              });
+              document.getElementsByClassName('swiper-wrapper')[0].appendChild(fragment);
+              scripts_showResults(true);
+            } else {
+              scripts_showResults(false);
+            }
 
           case 8:
           case "end":
@@ -10529,12 +10463,1128 @@ var addSlides = /*#__PURE__*/function () {
     }, _callee);
   }));
 
-  return function addSlides() {
+  return function sendRequest() {
     return _ref.apply(this, arguments);
   };
 }();
 
-/* harmony default export */ var scripts_addSlides = (addSlides);
+var specKey = function specKey(event) {
+  var input = document.getElementsByClassName('search-input')[0];
+  var selectedSymbol = input.selectionStart;
+  var oneSpace = ' ';
+  var fourSpace = '    ';
+
+  switch (event.target.innerText) {
+    case 'Backspace':
+      selectedSymbol = input.selectionStart;
+
+      if (selectedSymbol > 0) {
+        input.value = input.value.substring(0, input.selectionStart - 1) + input.value.substring(input.selectionStart);
+        input.focus();
+        input.selectionStart = selectedSymbol - 1;
+        input.selectionEnd = selectedSymbol - 1;
+      } else {
+        input.focus();
+      }
+
+      break;
+
+    case 'Tab':
+      selectedSymbol = input.selectionStart;
+      input.value = input.value.substring(0, input.selectionStart) + fourSpace + input.value.substring(input.selectionStart);
+      input.focus();
+      input.selectionStart = selectedSymbol + 4;
+      input.selectionEnd = selectedSymbol + 4;
+      break;
+
+    case 'CapsLock':
+      changeCaseCycle();
+      break;
+
+    case 'Enter':
+      sendRequest();
+      break;
+
+    case 'Del':
+      selectedSymbol = input.selectionStart;
+      input.value = input.value.substring(0, input.selectionStart) + input.value.substring(input.selectionStart + 1);
+      input.focus();
+      input.selectionStart = selectedSymbol;
+      input.selectionEnd = selectedSymbol;
+      break;
+
+    case '__________':
+      selectedSymbol = input.selectionStart;
+      input.value = input.value.substring(0, input.selectionStart) + oneSpace + input.value.substring(input.selectionStart);
+      input.focus();
+      input.selectionStart = selectedSymbol + 1;
+      input.selectionEnd = selectedSymbol + 1;
+      break;
+
+    case 'Language':
+      changeLang();
+      break;
+
+    case '◄':
+      input.focus();
+      input.selectionStart = input.selectionStart - 1;
+      input.selectionEnd = input.selectionEnd - 1;
+      break;
+
+    case '►':
+      input.focus();
+      input.selectionStart += 1;
+      break;
+
+    default:
+      console.log('default');
+  }
+};
+
+var typeText = function typeText(event) {
+  var input = document.getElementsByClassName('search-input')[0];
+  var selectedSymbol = input.selectionStart;
+  var clickedItem = event.target.classList[0];
+
+  if (clickedItem === 'down' || clickedItem === 'up' || clickedItem === 'key') {
+    var currentSymbol = event.toElement.innerText;
+
+    if (currentSymbol.length === 1 && currentSymbol !== '◄' && currentSymbol !== '►') {
+      input.value = input.value.substring(0, input.selectionStart) + currentSymbol + input.value.substring(input.selectionStart);
+      input.focus();
+      input.selectionStart = selectedSymbol + 1;
+      input.selectionEnd = selectedSymbol + 1;
+    }
+  }
+};
+
+var handKeyboard = function handKeyboard(event) {
+  activeClick(event);
+  specKey(event);
+  typeText(event);
+};
+
+/* harmony default export */ var scripts_handKeyboard = (handKeyboard);
+// CONCATENATED MODULE: ./src/scripts/handling.js
+function handling_asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function handling_asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { handling_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { handling_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+
+
+
+
+
+var handling_reset = function reset() {
+  document.getElementsByClassName('search-input')[0].value = '';
+};
+
+var handling_keyboard = function keyboard(event) {
+  event.preventDefault();
+  document.getElementsByClassName('keyboard')[0].classList.toggle('hidden');
+};
+
+var handling_submit = /*#__PURE__*/function () {
+  var _ref = handling_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(event) {
+    var input, word, newContent, fragment;
+    return regeneratorRuntime.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            event.preventDefault();
+            input = document.getElementsByClassName('search-input')[0];
+            _context.next = 4;
+            return scripts_getTranslate(input.value);
+
+          case 4:
+            word = _context.sent;
+            _context.next = 7;
+            return components_slider_slider(word, 1);
+
+          case 7:
+            newContent = _context.sent;
+
+            if (Array.from(newContent.childNodes[0].children).length > 0) {
+              fragment = document.createDocumentFragment();
+              Array.from(document.getElementsByClassName('swiper-wrapper')[0].children).map(function (child) {
+                return child.remove();
+              });
+              Array.from(newContent.childNodes[0].childNodes[0].children).map(function (child) {
+                return fragment.appendChild(child);
+              });
+              document.getElementsByClassName('swiper-wrapper')[0].appendChild(fragment);
+              scripts_showResults(true);
+            } else {
+              scripts_showResults(false);
+            }
+
+          case 9:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+
+  return function submit(_x) {
+    return _ref.apply(this, arguments);
+  };
+}();
+
+var handling_handling = function handling() {
+  sessionStorage.setItem('Category', 'dream');
+  scripts_showResults(true, 'dream');
+  document.getElementsByClassName('seacrh-clear')[0].addEventListener('click', handling_reset);
+  document.getElementsByClassName('search-keyboard')[0].addEventListener('click', handling_keyboard);
+  document.getElementsByClassName('search')[0].addEventListener('submit', handling_submit);
+  document.getElementsByClassName('keyboard')[0].addEventListener('click', function (event) {
+    return scripts_handKeyboard(event);
+  });
+};
+
+/* harmony default export */ var scripts_handling = (handling_handling);
+// EXTERNAL MODULE: ./src/containers/header/header.css
+var header = __webpack_require__(14);
+
+// CONCATENATED MODULE: ./src/containers/header/header.js
+
+
+var header_header = function header() {
+  var head = document.createElement('header');
+  head.classList.add('header');
+  var title = document.createElement('h1');
+  title.classList.add('title');
+  title.appendChild(document.createTextNode('MovieSearch'));
+  head.appendChild(title);
+  return head;
+};
+
+/* harmony default export */ var containers_header_header = (header_header);
+// EXTERNAL MODULE: ./src/containers/main/main.css
+var main = __webpack_require__(17);
+
+// EXTERNAL MODULE: ./src/components/UI/result/result.css
+var result = __webpack_require__(19);
+
+// CONCATENATED MODULE: ./src/components/UI/result/result.js
+
+
+var result_result = function result() {
+  var div = document.createElement('div');
+  div.classList.add('result');
+  var text = document.createElement('p');
+  text.className = 'result__text';
+  text.appendChild(document.createTextNode(''));
+  div.appendChild(text);
+  return div;
+};
+
+/* harmony default export */ var UI_result_result = (result_result);
+// EXTERNAL MODULE: ./src/components/search/search.css
+var search = __webpack_require__(21);
+
+// EXTERNAL MODULE: ./src/components/UI/button/button.css
+var button_button = __webpack_require__(24);
+
+// CONCATENATED MODULE: ./src/components/UI/button/button.js
+
+
+var button_button_button = function button(name, type, text) {
+  var btn = document.createElement('button');
+  btn.className = "".concat(name, " btn");
+  btn.type = type;
+  btn.appendChild(document.createTextNode(text));
+  return btn;
+};
+
+/* harmony default export */ var UI_button_button = (button_button_button);
+// EXTERNAL MODULE: ./src/components/UI/clear/clear.css
+var clear_clear = __webpack_require__(26);
+
+// CONCATENATED MODULE: ./src/components/UI/clear/clear.svg
+/* harmony default export */ var UI_clear_clear = (__webpack_require__.p + "assets/images/clear.svg");
+// CONCATENATED MODULE: ./src/components/UI/clear/clear.js
+
+
+
+var clear_clear_clear = function clear() {
+  var div = document.createElement('div');
+  div.className = 'seacrh-clear tooltip';
+  var image = document.createElement('img');
+  image.src = UI_clear_clear;
+  div.appendChild(image);
+  return div;
+};
+
+/* harmony default export */ var components_UI_clear_clear = (clear_clear_clear);
+// EXTERNAL MODULE: ./src/components/UI/form/form.css
+var form_form = __webpack_require__(28);
+
+// CONCATENATED MODULE: ./src/components/UI/form/form.js
+
+
+var form_form_form = function form(name) {
+  var formTag = document.createElement('form');
+  formTag.classList.add(name);
+  return formTag;
+};
+
+/* harmony default export */ var UI_form_form = (form_form_form);
+// EXTERNAL MODULE: ./src/components/UI/input/input.css
+var input_input = __webpack_require__(30);
+
+// CONCATENATED MODULE: ./src/components/UI/input/input.js
+
+
+var input_input_input = function input(info) {
+  var inputTag = document.createElement('input');
+  inputTag.className = info[0];
+  inputTag.type = info[1];
+
+  if (info[1] === 'image') {
+    inputTag.src = info[2];
+    inputTag.setAttribute('data-name', info[3]);
+  } else {
+    inputTag.setAttribute('autofocus', true);
+    inputTag.placeholder = info[2];
+  }
+
+  return inputTag;
+};
+
+/* harmony default export */ var UI_input_input = (input_input_input);
+// EXTERNAL MODULE: ./src/components/UI/keyboard/keyboard.css
+var keyboard_keyboard = __webpack_require__(32);
+
+// CONCATENATED MODULE: ./src/components/UI/keyboard/keyboard.png
+/* harmony default export */ var UI_keyboard_keyboard = (__webpack_require__.p + "assets/images/keyboard.png");
+// CONCATENATED MODULE: ./src/components/UI/keyboard/keyboard.js
+
+
+
+var keyboard_keyboard_keyboard = function keyboard() {
+  var div = document.createElement('div');
+  div.className = 'search-keyboard tooltip';
+  var image = document.createElement('img');
+  image.src = UI_keyboard_keyboard;
+  div.appendChild(image);
+  return div;
+};
+
+/* harmony default export */ var components_UI_keyboard_keyboard = (keyboard_keyboard_keyboard);
+// CONCATENATED MODULE: ./src/components/search/search.js
+
+
+
+
+
+
+
+var search_searchField = function searchField() {
+  var renderSearch = document.createDocumentFragment();
+  var temp = UI_form_form('search');
+  temp.appendChild(UI_input_input(['search-input', 'text', 'Search movie']));
+  temp.appendChild(components_UI_clear_clear());
+  temp.appendChild(components_UI_keyboard_keyboard());
+  temp.appendChild(UI_button_button('search-btn', 'submit', 'Search'));
+  renderSearch.appendChild(temp);
+  return renderSearch;
+};
+
+/* harmony default export */ var search_search = (search_searchField);
+// EXTERNAL MODULE: ./src/components/virtual-keyboard/virtual-keyboard.css
+var virtual_keyboard = __webpack_require__(34);
+
+// CONCATENATED MODULE: ./src/components/virtual-keyboard/keys.js
+var keys = {
+  row1: [{
+    name: 'Backquote',
+    code: 'Backquote',
+    content: [{
+      lang: 'rus',
+      down: 'ё',
+      up: 'Ё'
+    }, {
+      lang: 'eng',
+      down: '`',
+      up: '~'
+    }]
+  }, {
+    name: 'Digit1',
+    code: 'Digit1',
+    content: [{
+      lang: 'rus',
+      down: '1',
+      up: '!'
+    }, {
+      lang: 'eng',
+      down: '1',
+      up: '!'
+    }]
+  }, {
+    name: 'Digit2',
+    code: 'Digit2',
+    content: [{
+      lang: 'rus',
+      down: '2',
+      up: '"'
+    }, {
+      lang: 'eng',
+      down: '2',
+      up: '@'
+    }]
+  }, {
+    name: 'Digit3',
+    code: 'Digit3',
+    content: [{
+      lang: 'rus',
+      down: '3',
+      up: '№'
+    }, {
+      lang: 'eng',
+      down: '3',
+      up: '#'
+    }]
+  }, {
+    name: 'Digit4',
+    code: 'Digit4',
+    content: [{
+      lang: 'rus',
+      down: '4',
+      up: ';'
+    }, {
+      lang: 'eng',
+      down: '4',
+      up: '$'
+    }]
+  }, {
+    name: 'Digit5',
+    code: 'Digit5',
+    content: [{
+      lang: 'rus',
+      down: '5',
+      up: '%'
+    }, {
+      lang: 'eng',
+      down: '5',
+      up: '%'
+    }]
+  }, {
+    name: 'Digit6',
+    code: 'Digit6',
+    content: [{
+      lang: 'rus',
+      down: '6',
+      up: ':'
+    }, {
+      lang: 'eng',
+      down: '6',
+      up: '^'
+    }]
+  }, {
+    name: 'Digit7',
+    code: 'Digit7',
+    content: [{
+      lang: 'rus',
+      down: '7',
+      up: '?'
+    }, {
+      lang: 'eng',
+      down: '7',
+      up: '&'
+    }]
+  }, {
+    name: 'Digit8',
+    code: 'Digit8',
+    content: [{
+      lang: 'rus',
+      down: '8',
+      up: '*'
+    }, {
+      lang: 'eng',
+      down: '8',
+      up: '*'
+    }]
+  }, {
+    name: 'Digit9',
+    code: 'Digit9',
+    content: [{
+      lang: 'rus',
+      down: '9',
+      up: '('
+    }, {
+      lang: 'eng',
+      down: '9',
+      up: '('
+    }]
+  }, {
+    name: 'Digit0',
+    code: 'Digit0',
+    content: [{
+      lang: 'rus',
+      down: '0',
+      up: ')'
+    }, {
+      lang: 'eng',
+      down: '0',
+      up: ')'
+    }]
+  }, {
+    name: 'Minus',
+    code: 'Minus',
+    content: [{
+      lang: 'rus',
+      down: '-',
+      up: '_'
+    }, {
+      lang: 'eng',
+      down: '-',
+      up: '_'
+    }]
+  }, {
+    name: 'Equal',
+    code: 'Equal',
+    content: [{
+      lang: 'rus',
+      down: '=',
+      up: '+'
+    }, {
+      lang: 'eng',
+      down: '=',
+      up: '+'
+    }]
+  }, {
+    name: 'Backspace',
+    code: 'Backspace',
+    content: [{
+      lang: 'rus',
+      down: 'Backspace',
+      up: 'Backspace'
+    }, {
+      lang: 'eng',
+      down: 'Backspace',
+      up: 'Backspace'
+    }]
+  }],
+  row2: [{
+    name: 'Tab',
+    code: 'Tab',
+    content: [{
+      lang: 'rus',
+      down: 'Tab',
+      up: 'Tab'
+    }, {
+      lang: 'eng',
+      down: 'Tab',
+      up: 'Tab'
+    }]
+  }, {
+    name: 'KeyQ',
+    code: 'KeyQ',
+    content: [{
+      lang: 'rus',
+      down: 'й',
+      up: 'Й'
+    }, {
+      lang: 'eng',
+      down: 'q',
+      up: 'Q'
+    }]
+  }, {
+    name: 'KeyW',
+    code: 'KeyW',
+    content: [{
+      lang: 'rus',
+      down: 'ц',
+      up: 'Ц'
+    }, {
+      lang: 'eng',
+      down: 'w',
+      up: 'W'
+    }]
+  }, {
+    name: 'KeyE',
+    code: 'KeyE',
+    content: [{
+      lang: 'rus',
+      down: 'у',
+      up: 'У'
+    }, {
+      lang: 'eng',
+      down: 'e',
+      up: 'E'
+    }]
+  }, {
+    name: 'KeyR',
+    code: 'KeyR',
+    content: [{
+      lang: 'rus',
+      down: 'к',
+      up: 'К'
+    }, {
+      lang: 'eng',
+      down: 'r',
+      up: 'R'
+    }]
+  }, {
+    name: 'KeyT',
+    code: 'KeyT',
+    content: [{
+      lang: 'rus',
+      down: 'е',
+      up: 'Е'
+    }, {
+      lang: 'eng',
+      down: 't',
+      up: 'T'
+    }]
+  }, {
+    name: 'KeyY',
+    code: 'KeyY',
+    content: [{
+      lang: 'rus',
+      down: 'н',
+      up: 'Н'
+    }, {
+      lang: 'eng',
+      down: 'y',
+      up: 'Y'
+    }]
+  }, {
+    name: 'KeyU',
+    code: 'KeyU',
+    content: [{
+      lang: 'rus',
+      down: 'г',
+      up: 'Г'
+    }, {
+      lang: 'eng',
+      down: 'u',
+      up: 'u'
+    }]
+  }, {
+    name: 'KeyI',
+    code: 'KeyI',
+    content: [{
+      lang: 'rus',
+      down: 'ш',
+      up: 'Ш'
+    }, {
+      lang: 'eng',
+      down: 'i',
+      up: 'I'
+    }]
+  }, {
+    name: 'KeyO',
+    code: 'KeyO',
+    content: [{
+      lang: 'rus',
+      down: 'щ',
+      up: 'Щ'
+    }, {
+      lang: 'eng',
+      down: 'o',
+      up: 'O'
+    }]
+  }, {
+    name: 'KeyP',
+    code: 'KeyP',
+    content: [{
+      lang: 'rus',
+      down: 'з',
+      up: 'З'
+    }, {
+      lang: 'eng',
+      down: 'p',
+      up: 'P'
+    }]
+  }, {
+    name: 'BracketLeft',
+    code: 'BracketLeft',
+    content: [{
+      lang: 'rus',
+      down: 'х',
+      up: 'Х'
+    }, {
+      lang: 'eng',
+      down: '[',
+      up: '{'
+    }]
+  }, {
+    name: 'BracketRight',
+    code: 'BracketRight',
+    content: [{
+      lang: 'rus',
+      down: 'ъ',
+      up: 'Ъ'
+    }, {
+      lang: 'eng',
+      down: ']',
+      up: '}'
+    }]
+  }, {
+    name: 'Backslash',
+    code: 'Backslash',
+    content: [{
+      lang: 'rus',
+      down: '\\',
+      up: '/'
+    }, {
+      lang: 'eng',
+      down: '\\',
+      up: '|'
+    }]
+  }, {
+    name: 'Delete',
+    code: 'Delete',
+    content: [{
+      lang: 'rus',
+      down: 'Del',
+      up: 'Del'
+    }, {
+      lang: 'eng',
+      down: 'Del',
+      up: 'Del'
+    }]
+  }],
+  row3: [{
+    name: 'CapsLock',
+    code: 'CapsLock',
+    content: [{
+      lang: 'rus',
+      down: 'CapsLock',
+      up: 'CapsLock'
+    }, {
+      lang: 'eng',
+      down: 'CapsLock',
+      up: 'CapsLock'
+    }]
+  }, {
+    name: 'KeyA',
+    code: 'KeyA',
+    content: [{
+      lang: 'rus',
+      down: 'ф',
+      up: 'Ф'
+    }, {
+      lang: 'eng',
+      down: 'a',
+      up: 'A'
+    }]
+  }, {
+    name: 'KeyS',
+    code: 'KeyS',
+    content: [{
+      lang: 'rus',
+      down: 'ы',
+      up: 'Ы'
+    }, {
+      lang: 'eng',
+      down: 's',
+      up: 'S'
+    }]
+  }, {
+    name: 'KeyD',
+    code: 'KeyD',
+    content: [{
+      lang: 'rus',
+      down: 'в',
+      up: 'В'
+    }, {
+      lang: 'eng',
+      down: 'd',
+      up: 'D'
+    }]
+  }, {
+    name: 'KeyF',
+    code: 'KeyF',
+    content: [{
+      lang: 'rus',
+      down: 'а',
+      up: 'А'
+    }, {
+      lang: 'eng',
+      down: 'f',
+      up: 'F'
+    }]
+  }, {
+    name: 'KeyG',
+    code: 'KeyG',
+    content: [{
+      lang: 'rus',
+      down: 'п',
+      up: 'П'
+    }, {
+      lang: 'eng',
+      down: 'g',
+      up: 'G'
+    }]
+  }, {
+    name: 'KeyH',
+    code: 'KeyH',
+    content: [{
+      lang: 'rus',
+      down: 'р',
+      up: 'Р'
+    }, {
+      lang: 'eng',
+      down: 'h',
+      up: 'H'
+    }]
+  }, {
+    name: 'KeyJ',
+    code: 'KeyJ',
+    content: [{
+      lang: 'rus',
+      down: 'о',
+      up: 'О'
+    }, {
+      lang: 'eng',
+      down: 'j',
+      up: 'J'
+    }]
+  }, {
+    name: 'KeyK',
+    code: 'KeyK',
+    content: [{
+      lang: 'rus',
+      down: 'л',
+      up: 'Л'
+    }, {
+      lang: 'eng',
+      down: 'k',
+      up: 'K'
+    }]
+  }, {
+    name: 'KeyL',
+    code: 'KeyL',
+    content: [{
+      lang: 'rus',
+      down: 'д',
+      up: 'Д'
+    }, {
+      lang: 'eng',
+      down: 'l',
+      up: 'L'
+    }]
+  }, {
+    name: 'Semicolon',
+    code: 'Semicolon',
+    content: [{
+      lang: 'rus',
+      down: 'ж',
+      up: 'Ж'
+    }, {
+      lang: 'eng',
+      down: ';',
+      up: ':'
+    }]
+  }, {
+    name: 'Quote',
+    code: 'Quote',
+    content: [{
+      lang: 'rus',
+      down: 'э',
+      up: 'Э'
+    }, {
+      lang: 'eng',
+      down: "'",
+      up: '"'
+    }]
+  }, {
+    name: 'Enter',
+    code: 'Enter',
+    content: [{
+      lang: 'rus',
+      down: 'Enter',
+      up: 'Enter'
+    }, {
+      lang: 'eng',
+      down: 'Enter',
+      up: 'Enter'
+    }]
+  }],
+  row4: [{
+    name: 'Language',
+    code: 'Language',
+    content: [{
+      lang: 'rus',
+      down: 'Language',
+      up: 'Language'
+    }, {
+      lang: 'eng',
+      down: 'Language',
+      up: 'Language'
+    }]
+  }, {
+    name: 'KeyZ',
+    code: 'KeyZ',
+    content: [{
+      lang: 'rus',
+      down: 'я',
+      up: 'Я'
+    }, {
+      lang: 'eng',
+      down: 'z',
+      up: 'Z'
+    }]
+  }, {
+    name: 'KeyX',
+    code: 'KeyX',
+    content: [{
+      lang: 'rus',
+      down: 'ч',
+      up: 'Ч'
+    }, {
+      lang: 'eng',
+      down: 'x',
+      up: 'X'
+    }]
+  }, {
+    name: 'KeyC',
+    code: 'KeyC',
+    content: [{
+      lang: 'rus',
+      down: 'с',
+      up: 'С'
+    }, {
+      lang: 'eng',
+      down: 'c',
+      up: 'C'
+    }]
+  }, {
+    name: 'KeyV',
+    code: 'KeyV',
+    content: [{
+      lang: 'rus',
+      down: 'м',
+      up: 'М'
+    }, {
+      lang: 'eng',
+      down: 'v',
+      up: 'V'
+    }]
+  }, {
+    name: 'KeyB',
+    code: 'KeyB',
+    content: [{
+      lang: 'rus',
+      down: 'и',
+      up: 'И'
+    }, {
+      lang: 'eng',
+      down: 'b',
+      up: 'B'
+    }]
+  }, {
+    name: 'KeyN',
+    code: 'KeyN',
+    content: [{
+      lang: 'rus',
+      down: 'т',
+      up: 'Т'
+    }, {
+      lang: 'eng',
+      down: 'n',
+      up: 'N'
+    }]
+  }, {
+    name: 'KeyM',
+    code: 'KeyM',
+    content: [{
+      lang: 'rus',
+      down: 'ь',
+      up: 'Ь'
+    }, {
+      lang: 'eng',
+      down: 'm',
+      up: 'M'
+    }]
+  }, {
+    name: 'Comma',
+    code: 'Comma',
+    content: [{
+      lang: 'rus',
+      down: 'б',
+      up: 'Б'
+    }, {
+      lang: 'eng',
+      down: ',',
+      up: '<'
+    }]
+  }, {
+    name: 'Period',
+    code: 'Period',
+    content: [{
+      lang: 'rus',
+      down: 'ю',
+      up: 'Ю'
+    }, {
+      lang: 'eng',
+      down: '.',
+      up: '>'
+    }]
+  }, {
+    name: 'Slash',
+    code: 'Slash',
+    content: [{
+      lang: 'rus',
+      down: '.',
+      up: ','
+    }, {
+      lang: 'eng',
+      down: '/',
+      up: '?'
+    }]
+  }],
+  row5: [{
+    name: 'ArrowLeft',
+    code: 'ArrowLeft',
+    content: [{
+      lang: 'rus',
+      down: '◄',
+      up: '◄'
+    }, {
+      lang: 'eng',
+      down: '◄',
+      up: '◄'
+    }]
+  }, {
+    name: 'Space',
+    code: 'Space',
+    content: [{
+      lang: 'rus',
+      down: '__________',
+      up: '__________'
+    }, {
+      lang: 'eng',
+      down: '__________',
+      up: '__________'
+    }]
+  }, {
+    name: 'ArrowRight',
+    code: 'ArrowRight',
+    content: [{
+      lang: 'rus',
+      down: '►',
+      up: '►'
+    }, {
+      lang: 'eng',
+      down: '►',
+      up: '►'
+    }]
+  }]
+};
+/* harmony default export */ var virtual_keyboard_keys = (keys);
+// CONCATENATED MODULE: ./src/components/virtual-keyboard/virtual-keyboard.js
+
+
+
+var virtual_keyboard_renderVirtualKeyboard = function renderVirtualKeyboard() {
+  var keyboard = document.createElement('div');
+  keyboard.classList.add('keyboard');
+
+  var _loop = function _loop(key) {
+    var row = document.createElement('div');
+    row.classList.add('row');
+    keyboard.appendChild(row);
+    virtual_keyboard_keys[key].map(function (item) {
+      var note = document.createElement('div');
+      note.classList.add('key');
+      note.classList.add(item.name);
+      row.appendChild(note);
+      var rus = document.createElement('span');
+      rus.classList.add('rus');
+      rus.classList.add('hidden');
+      note.appendChild(rus);
+      var eng = document.createElement('span');
+      eng.classList.add('eng');
+      eng.classList.add('show');
+      note.appendChild(eng);
+
+      for (var index = 0; index < item.content.length; index += 1) {
+        var down = document.createElement('span');
+        down.classList.add('down');
+        var downText = document.createTextNode(item.content[index].down);
+        down.appendChild(downText);
+        var up = document.createElement('span');
+        up.classList.add('up');
+        up.classList.add('hidden');
+        var upText = document.createTextNode(item.content[index].up);
+        up.appendChild(upText);
+        var currentString = [rus, eng];
+        currentString[index].appendChild(down);
+        currentString[index].appendChild(up);
+      }
+    });
+  };
+
+  for (var key in virtual_keyboard_keys) {
+    _loop(key);
+  }
+
+  return keyboard;
+};
+
+var virtualKeyboard = function virtualKeyboard() {
+  var virtual = document.createDocumentFragment();
+  virtual.appendChild(virtual_keyboard_renderVirtualKeyboard());
+  return virtual;
+};
+
+/* harmony default export */ var virtual_keyboard_virtual_keyboard = (virtualKeyboard);
+// CONCATENATED MODULE: ./src/containers/main/main.js
+function main_asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function main_asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { main_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { main_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+
+
+
+
+
+
+var main_main = /*#__PURE__*/function () {
+  var _ref = main_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+    var mainTag, container;
+    return regeneratorRuntime.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            mainTag = document.createElement('main');
+            container = document.createElement('div');
+            container.classList.add('container');
+            container.appendChild(search_search());
+            container.appendChild(virtual_keyboard_virtual_keyboard());
+            container.appendChild(UI_result_result());
+            _context.t0 = container;
+            _context.next = 9;
+            return components_slider_slider('dream', 1);
+
+          case 9:
+            _context.t1 = _context.sent;
+
+            _context.t0.appendChild.call(_context.t0, _context.t1);
+
+            mainTag.appendChild(container);
+            sessionStorage.setItem('Category', 'dream');
+            sessionStorage.setItem('Page', 1);
+            return _context.abrupt("return", mainTag);
+
+          case 15:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+
+  return function main() {
+    return _ref.apply(this, arguments);
+  };
+}();
+
+/* harmony default export */ var containers_main_main = (main_main);
 // CONCATENATED MODULE: ./src/App.js
 function App_asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -10571,43 +11621,59 @@ var App_render = /*#__PURE__*/function () {
             body.appendChild(frag);
             scripts_handling();
             swiper = new swiper_esm_bundle('.swiper-container', {
-              observer: true,
-              observeParents: true,
-              observeSlideChildren: true,
-              slidesPerView: 4,
-              spaceBetween: 20,
-              slidesPerGroup: 1,
+              breakpoints: {
+                320: {
+                  slidesPerView: 1,
+                  spaceBetween: 10
+                },
+                480: {
+                  slidesPerView: 2,
+                  spaceBetween: 15
+                },
+                720: {
+                  slidesPerView: 3,
+                  spaceBetween: 20
+                },
+                960: {
+                  slidesPerView: 4,
+                  spaceBetween: 20
+                }
+              },
               loop: false,
               loopFillGroupWithBlank: true,
-              pagination: {
-                el: '.swiper-pagination',
-                clickable: true
-              },
               navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev'
-              }
+              },
+              observeParents: true,
+              observer: true,
+              observeSlideChildren: true,
+              slidesPerGroup: 1,
+              slidesPerView: 4,
+              spaceBetween: 20
             });
             swiper.on('observerUpdate', function () {
-              return console.log('dom');
+              console.log('dom');
             });
             swiper.on('reachEnd', /*#__PURE__*/App_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
               return regeneratorRuntime.wrap(function _callee$(_context) {
                 while (1) {
                   switch (_context.prev = _context.next) {
                     case 0:
+                      document.getElementsByClassName('loader')[0].classList.remove('hidden-load');
                       _context.t0 = swiper;
-                      _context.next = 3;
+                      _context.next = 4;
                       return scripts_addSlides();
 
-                    case 3:
+                    case 4:
                       _context.t1 = _context.sent;
 
                       _context.t0.appendSlide.call(_context.t0, _context.t1);
 
-                      swiper.slideTo(6, 400, false);
+                      swiper.update();
+                      document.getElementsByClassName('loader')[0].classList.add('hidden-load');
 
-                    case 6:
+                    case 8:
                     case "end":
                       return _context.stop();
                   }
@@ -10647,7 +11713,12 @@ App_render();
 
 /***/ }),
 /* 7 */,
-/* 8 */,
+/* 8 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
 /* 9 */,
 /* 10 */
 /***/ (function(module, exports) {
@@ -10656,20 +11727,15 @@ App_render();
 
 /***/ }),
 /* 11 */,
-/* 12 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
+/* 12 */,
 /* 13 */,
-/* 14 */,
-/* 15 */
+/* 14 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
+/* 15 */,
 /* 16 */,
 /* 17 */
 /***/ (function(module, exports) {
@@ -10692,21 +11758,43 @@ App_render();
 
 /***/ }),
 /* 22 */,
-/* 23 */
+/* 23 */,
+/* 24 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 24 */,
-/* 25 */
+/* 25 */,
+/* 26 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 26 */,
-/* 27 */
+/* 27 */,
+/* 28 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 29 */,
+/* 30 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 31 */,
+/* 32 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 33 */,
+/* 34 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

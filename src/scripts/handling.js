@@ -17,7 +17,7 @@ const submit = async (event) => {
   const input = document.getElementsByClassName('search-input')[0]
   let word = await translate(input.value)
   const newContent = await slider(word, 1)
-  if (Array.from(newContent.childNodes[0].children).length > 0) {
+  if (Array.from(newContent.childNodes[0].childNodes[0].children).length > 0) {
     const fragment = document.createDocumentFragment()
     Array.from(document.getElementsByClassName('swiper-wrapper')[0].children).map((child) => child.remove())
     Array.from(newContent.childNodes[0].childNodes[0].children).map((child) => fragment.appendChild(child))

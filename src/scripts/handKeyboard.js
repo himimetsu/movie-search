@@ -114,9 +114,6 @@ const specKey = (event) => {
       input.focus()
       input.selectionStart += 1
       break
-
-    default:
-      console.log('default')
   }
 }
 

@@ -31,6 +31,7 @@ const omdb = async (name, page) => {
         item.Score = data.imdbRating
       })
   })
+
   await Promise.all(promisesRating)
 
   return result

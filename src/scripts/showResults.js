@@ -21,11 +21,9 @@ const showResults = (bool, word) => {
   if (bool) {
     rewritingCategory(bool, word)
     result.classList.add('right')
-    console.log('По вашему запросу найдены фильмы!')
   } else {
     rewritingCategory(bool)
     result.classList.remove('right')
-    console.log('По вашему запросу ничего не найдено!')
   }
 }
 export default showResults

@@ -4,8 +4,8 @@
   "description": "movie-search task",
   "main": "index.js",
   "scripts": {
-    "build": "npx webpack",
-    "start:dev": "webpack-dev-server",
+    "start": "webpack-dev-server --mode development --open --hot",
+    "build": "webpack --mode production",
     "watch": "webpack --watch",
     "test": "jest --config jest.config.js"
   },
@@ -29,7 +29,8 @@
     "style-loader": "^1.1.4",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-server": "^3.10.3",
+    "html-webpack-plugin": "^4.3.0"
   },
   "dependencies": {
     "regenerator-runtime": "^0.13.5",

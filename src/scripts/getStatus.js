@@ -37,7 +37,7 @@ const getStatus = (status) => {
       break
 
     default:
-      console.log('Всё ок!')
+      console.log('Соединение успешно установлено.')
       break
   }
 }

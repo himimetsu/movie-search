@@ -18,6 +18,8 @@ const rewritingCategory = async (bool, word) => {
 
 const showResults = (bool, word) => {
   const result = document.getElementsByClassName('result')[0]
+  document.getElementsByClassName('loader')[0].classList.add('hidden-load')
+
   if (bool) {
     rewritingCategory(bool, word)
     result.classList.add('right')

@@ -15,6 +15,9 @@ const keyboard = (event) => {
 const submit = async (event) => {
   event.preventDefault()
   const input = document.getElementsByClassName('search-input')[0]
+  if (input.value.length > 0) {
+    document.getElementsByClassName('loader')[0].classList.remove('hidden-load')
+  }
   let word = await translate(input.value)
   const newContent = await slider(word, 1)
   if (Array.from(newContent.childNodes[0].childNodes[0].children).length > 0) {

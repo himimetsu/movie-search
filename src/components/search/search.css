@@ -2,6 +2,7 @@
   width: 100%;
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .search-input {
@@ -35,7 +36,7 @@
 
   .seacrh-clear {
     position: relative;
-    left: -40px;
+    left: -40px !important;
     cursor: pointer;
     user-select: none;
   }

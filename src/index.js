@@ -1,19 +1,22 @@
 import 'regenerator-runtime/runtime'
-import Swiper from 'swiper'
 import addSlides from './scripts/addSlides'
 import footer from './containers/footer/footer'
 import handling from './scripts/handling'
 import header from './containers/header/header'
 import main from './containers/main/main'
+import Swiper from 'swiper'
 
 const render = async () => {
   const body = document.getElementsByTagName('body')[0]
   const frag = document.createDocumentFragment()
+
   frag.appendChild(header())
   frag.appendChild(await main())
   frag.appendChild(footer())
   body.appendChild(frag)
+
   handling()
+
   let swiper = new Swiper('.swiper-container', {
     breakpoints: {
       320: {
@@ -46,9 +49,9 @@ const render = async () => {
     slidesPerView: 4,
     spaceBetween: 20,
   });
-  swiper.on('observerUpdate', () => {
-    console.log('dom')
-  })
+
+  swiper.on('observerUpdate', () => {})
+
   swiper.on('reachEnd', async () => {
     document.getElementsByClassName('loader')[0].classList.remove('hidden-load')
     swiper.appendSlide(await addSlides())
@@ -56,4 +59,5 @@ const render = async () => {
     document.getElementsByClassName('loader')[0].classList.add('hidden-load')
   })
 }
+
 render()

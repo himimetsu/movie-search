@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'OpenSans-SemiBold', sans-serif;
   background: #DCDCDC;
 }
 
@@ -22,4 +22,12 @@ body {
   user-select: none;
   text-align: center;
   color: white;
+}
+
+@font-face {
+  font-family: "OpenSans-SemiBold";
+
+  src: url("../../assets/fonts/OpenSans-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }

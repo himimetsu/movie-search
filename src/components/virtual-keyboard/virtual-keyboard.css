@@ -10,6 +10,7 @@
 .hidden {
   display: none;
 }
+
 .row .active {
   border-radius: 20px;
   background: #2e3340;

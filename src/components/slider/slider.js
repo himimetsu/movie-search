@@ -1,4 +1,5 @@
 import './slider.css'
+import './swiper-bundle.min.css'
 import loader from '../UI/loader/loader'
 import omdb from '../../scripts/omdb'
 import slide from './slide/slide'

@@ -1,15 +1,14 @@
 const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  mode: 'production',
-  entry: './src/App.js',
+  entry: './src/index.js',
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname, 'production')
   },
   optimization: {
-    minimize: false
+    minimize: true
   },
   module: {
     rules: [
@@ -25,11 +24,19 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ExtractTextPlugin.extract(
+        use: ["style-loader", "css-loader"]
+      },
+      {
+        test: /\.(woff|woff2|ttf|otf)$/i,
+        use: [
           {
-            fallback: 'style-loader',
-            use: ['css-loader']
-          })
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'assets/fonts',
+            },
+          },
+        ],
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
@@ -68,7 +75,9 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin({ filename: 'index.css' }),
+    new HtmlWebpackPlugin({
+      template: "./src/index.html"
+    }),
   ],
   devServer: {
     contentBase: path.join(__dirname, 'production'),

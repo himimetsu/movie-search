@@ -1,0 +1,9 @@
+.result {
+  text-align: center;
+  font-size: 20px;
+  color: red;
+}
+
+.container .right {
+  color: green;
+}

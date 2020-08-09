@@ -1,0 +1,55 @@
+footer {
+  margin-top: 30px;
+  background-image: url('./img/footer.svg');
+  background-size: cover;
+  background-color: #2C3E50;
+}
+
+footer .container {
+  display: flex;
+  padding: 30px;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.logo-git {
+  margin-right: 20px;
+}
+
+.logo-git img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.profile a {
+  transition: ease all 0.3s;
+  color: white;
+  text-decoration: none;
+}
+
+.profile a:hover {
+  color: red;
+}
+
+.school {
+  text-align: center;
+  cursor: default;
+  transition: ease all 0.3s;
+}
+
+.school:hover {
+  color: red;
+}
+
+@media only screen and (max-width: 320px) {
+  body footer .container {
+    font-size: 18px;
+  }
+}

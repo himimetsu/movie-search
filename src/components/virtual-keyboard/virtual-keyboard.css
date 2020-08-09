@@ -1,0 +1,55 @@
+.keyboard {
+  max-width: 1400px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 3px solid black;
+  border-radius: 5px;
+  background: #888888;
+}
+
+.hidden {
+  display: none;
+}
+
+.row .active {
+  border-radius: 20px;
+  background: #2e3340;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.key {
+  height: 40px;
+  width: 100%;
+  margin: 5px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 40px;
+  font-weight: 900;
+  color: white;
+  background: #444444;
+  border-radius: 5px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.key:hover {
+  background-color: #2e3340;
+}
+
+.keyboard .Tab, .Backspace, .Delete, .CapsLock, .Enter, .Language {
+  padding: 0 10px;
+}
+
+.rus, .eng {
+  user-select: none;
+}
+
+@media only screen and (max-width: 719px) {
+  .keyboard {
+    display: none;
+  }
+}

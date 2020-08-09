@@ -1,0 +1,11 @@
+.seacrh-clear {
+  position: relative;
+  left: -120px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.seacrh-clear img {
+  height: 23px;
+  width: 23px;
+}

@@ -1,0 +1,40 @@
+{
+  "name": "movie-search",
+  "version": "1.0.0",
+  "description": "movie-search task",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --open --hot",
+    "build": "webpack --mode production",
+    "watch": "webpack --watch",
+    "test": "jest --config jest.config.js"
+  },
+  "author": "Vladislav Ivanov",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "babel-jest": "^26.0.1",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.5.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^6.0.0",
+    "image-webpack-loader": "^6.0.0",
+    "jest": "^25.5.4",
+    "jest-css-modules": "^2.1.0",
+    "jest-transform-css": "^2.0.0",
+    "style-loader": "^1.1.4",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "html-webpack-plugin": "^4.3.0",
+    "copy-webpack-plugin": "^6.0.3"
+  },
+  "dependencies": {
+    "regenerator-runtime": "^0.13.5",
+    "swiper": "^5.3.8"
+  }
+}

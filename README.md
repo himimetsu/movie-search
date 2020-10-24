@@ -1,2 +1,2 @@
 # Movie Search
-[DEPLOY](https://movie-search-himimetsu.netlify.app/)
+# [DEMO](https://movie-search-himimetsu.netlify.app/)

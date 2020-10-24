@@ -1,11 +1,9 @@
-import getTranslate from './getTranslate'
-
-const rewritingCategory = async (bool, word) => {
+const rewritingCategory = (bool, word) => {
   if (bool) {
     if (word) {
-      sessionStorage.setItem('Category', await getTranslate(word))
+      sessionStorage.setItem('Category', word)
     } else {
-      sessionStorage.setItem('Category', await getTranslate(document.getElementsByClassName('search-input')[0].value))
+      sessionStorage.setItem('Category', document.getElementsByClassName('search-input')[0].value)
     }
     sessionStorage.setItem('Page', 1)
     const success = document.getElementsByClassName('search-input')[0].value

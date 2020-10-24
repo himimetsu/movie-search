@@ -1,6 +1,5 @@
 import showResults from './showResults'
 import slider from '../components/slider/slider'
-import translate from './getTranslate'
 
 const changeCaseCycle = () => {
   const up = document.getElementsByClassName('up')
@@ -37,8 +36,7 @@ const activeClick = (event) => {
 
 const sendRequest = async () => {
   const input = document.getElementsByClassName('search-input')[0]
-  let word = await translate(input.value)
-  const newContent = await slider(word, 1)
+  const newContent = await slider(input.value, 1)
   if (Array.from(newContent.childNodes[0].childNodes[0].children).length > 0) {
     const fragment = document.createDocumentFragment()
     Array.from(document.getElementsByClassName('swiper-wrapper')[0].children).map((child) => child.remove())

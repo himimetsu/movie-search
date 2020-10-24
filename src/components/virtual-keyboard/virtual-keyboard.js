@@ -4,6 +4,7 @@ import keys from './keys'
 const renderVirtualKeyboard = () => {
   const keyboard = document.createElement('div')
   keyboard.classList.add('keyboard')
+  keyboard.classList.add('hidden')
   for (let key in keys) {
     const row = document.createElement('div')
     row.classList.add('row')
